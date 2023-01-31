@@ -1,39 +1,82 @@
 body {
+  font-family: sans-serif;
+  background-color: #dddada;
+}
+* {
   margin: 0;
   padding: 0;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .container {
-  height: 100vh;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  flex-wrap: wrap;
 }
-
+.card {
+  width: 320px;
+  height: 320px;
+  margin: 100px;
+  position: relative;
+}
+.card:hover .card__img-box {
+  transform: translate(-70px, -70px);
+}
+.card:hover .card__content {
+  transform: translate(70px, 70px);
+}
+.card__img-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: all 0.7s ease-in-out;
+}
+.card__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.card__content {
+  transition: all 0.7s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+}
+.card__name {
+  font-size: 30px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.card__speciality {
+  font-size: 25px;
+  font-weight: 300;
+  opacity: 0.6;
+}
+.card__contacts {
+  font-size: 25px;
+  font-weight: 300;
+  opacity: 0.6;
+}
 .social {
+  margin-top: 5px;
   display: flex;
   list-style: none;
   justify-content: space-between;
-  width: 80%;
 }
-
 .social__item {
-  width: 70px;
-  height: 70px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  border: 5px solid white;
+  border: 2px solid white;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 35px;
+  font-size: 18px;
   transition: all 0.5s;
 }
-
 .link {
   text-decoration: none;
   color: white;
@@ -95,57 +138,6 @@ body {
 }
 .discord:hover .link {
   color: #5865f2;
-  transform: scale(1.3);
-  transition: 0.5s;
-}
-
-.youtube:hover {
-  border-color: #ff0000;
-  box-shadow: 0px 0px 15px #ff0000, 0px 0px 50px #ff0000, 0px 0px 100px #ff0000;
-  transform: scale(1.2);
-}
-.youtube:hover .link {
-  color: #ff0000;
-  transform: scale(1.3);
-  transition: 0.5s;
-}
-.google:hover {
-  border-color: #fbbc05;
-  box-shadow: 0px 0px 15px #fbbc05, 0px 0px 50px #fbbc05, 0px 0px 100px #fbbc05;
-  transform: scale(1.2);
-}
-.google:hover .link {
-  color: #fbbc05;
-  transform: scale(1.3);
-  transition: 0.5s;
-}
-.amazon:hover {
-  border-color: #ff9900;
-  box-shadow: 0px 0px 15px #ff9900, 0px 0px 50px #ff9900, 0px 0px 100px #ff9900;
-  transform: scale(1.2);
-}
-.amazon:hover .link {
-  color: #ff9900;
-  transform: scale(1.3);
-  transition: 0.5s;
-}
-.apple:hover {
-  border-color: white;
-  box-shadow: 0px 0px 15px white, 0px 0px 50px white, 0px 0px 100px white;
-  transform: scale(1.2);
-}
-.apple:hover .link {
-  color: white;
-  transform: scale(1.3);
-  transition: 0.5s;
-}
-.ebay:hover {
-  border-color: #e53238;
-  box-shadow: 0px 0px 15px #e53238, 0px 0px 50px #e53238, 0px 0px 100px #e53238;
-  transform: scale(1.2);
-}
-.ebay:hover .link {
-  color: #e53238;
   transform: scale(1.3);
   transition: 0.5s;
 }
